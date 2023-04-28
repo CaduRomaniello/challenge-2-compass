@@ -3,12 +3,13 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 import LoginScreen from './screens/LoginScreen'
 import { Colors } from './constants/styles';
+import SignupScreen from './screens/SignupScreen';
 
 export default function App() {
   return (
     <View style={styles.rootContainer}>
       <SafeAreaView style={styles.container}>
-        <LoginScreen/>
+        <SignupScreen/>
       </SafeAreaView>
     </View>
   );
