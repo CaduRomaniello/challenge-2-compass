@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign:'center',
         alignItems: 'center',
-        // marginTop: 100,
         marginBottom:100
     },
     inputsView:{

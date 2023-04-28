@@ -1,16 +1,15 @@
 // Button component
 
-import { View, StyleSheet, TextInput, Image, Text, Pressable } from 'react-native'
-import {Colors} from '../../constants/styles'
+import { View, Text, Pressable } from 'react-native'
 import styles from './style'
 
 type Props = {
-    btnText:string;
-    func1?:Function;
-    func2?:Function;
-    func3?:Function;
-    func4?:Function;
-    goToFunc?:Function
+    btnText:string;    // text that will be displayed in the button
+    func1?:Function;   // auxiliar funtion to handle useState of inputs and checkbox
+    func2?:Function;   // auxiliar funtion to handle useState of inputs and checkbox
+    func3?:Function;   // auxiliar funtion to handle useState of inputs and checkbox
+    func4?:Function;   // auxiliar funtion to handle useState of inputs and checkbox
+    goToFunc?:Function // function to do the navigation
 };
 
 const Button = ({btnText, func1, func2, func3, func4, goToFunc}:Props) => {

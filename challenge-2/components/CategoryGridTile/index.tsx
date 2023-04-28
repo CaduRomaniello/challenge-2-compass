@@ -1,4 +1,6 @@
-import { View, Text, StyleSheet } from "react-native"
+// this component represents each white sqaure in the home page
+
+import { View } from "react-native"
 import styles from "./style"
 
 type Props={

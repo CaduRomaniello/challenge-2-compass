@@ -6,13 +6,13 @@ import styles from './style'
 import {Colors} from '../../constants/styles'
 
 type Props = {
-    iconPath: ImageSourcePropType;
-    placeHolder:string;
-    password:boolean;
-    keyboardType:KeyboardTypeOptions | undefined;
-    value:string;
-    onChangeText:((text: string) => void) | undefined;
-    isEmpty:boolean;
+    iconPath: ImageSourcePropType;                     // icon that will be displayed in the input
+    placeHolder:string;                                // input placeholder
+    password:boolean;                                  // variable to check if input will receive a password
+    keyboardType:KeyboardTypeOptions | undefined;      // variable to define the type of the keyboard that will appear when user starts to digit in the input field
+    value:string;                                      // variable tht will hold the value that will be inserted in the input field
+    onChangeText:((text: string) => void) | undefined; // function that will update the variable that holds the input value
+    isEmpty:boolean;                                   // variable that checks if the input field is empty
 };
 
 const Input = ({iconPath, placeHolder, password, keyboardType, value, onChangeText, isEmpty}:Props) => {
@@ -32,14 +32,3 @@ const Input = ({iconPath, placeHolder, password, keyboardType, value, onChangeTe
 };
 
 export default Input;
-
-// function Input(props){
-//     return <View style={styles.container}>
-//         <Image source={props.iconPath} style={styles.img}/>
-//         <TextInput style={styles.input}
-//         secureTextEntry={props.password}
-//         placeholder={props.placeHolder}
-//         placeholderTextColor={Colors.inputPlaceholder}
-//         keyboardType={props.keyboardType}/>
-//     </View>
-// }

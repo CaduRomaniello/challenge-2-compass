@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
         textAlign:'center',
         alignItems: 'center',
         marginTop: 100,
-        // marginBottom:50
     },
     inputsView:{
         flex: 2,
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
     checkboxError:{
         marginRight: 10,
         borderRadius: 5,
-        borderColor:"red",
+        borderColor:Colors.warning,
         backgroundColor: "white"
     },
     checkboxText:{

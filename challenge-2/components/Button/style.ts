@@ -10,13 +10,10 @@ const styles = StyleSheet.create({
     innerContainer: {
         borderRadius: 25,
         backgroundColor: Colors.primary,
-        // justifyContent: 'flex-start',
         flexDirection:'row',
-        // alignItems:'center',
         paddingTop:19,
         paddingBottom: 19,
         width:'80%',
-        // marginBottom:32
     },
     btnText:{
         color:"white",
