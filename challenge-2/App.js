@@ -10,7 +10,7 @@ export default function App() {
   return (
     <View style={styles.rootContainer}>
       <SafeAreaView style={styles.container}>
-        <HomeScreen/>
+        <SignupScreen/>
       </SafeAreaView>
     </View>
   );
