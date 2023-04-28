@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: Colors.background
     },
     contentContainer:{
         flex:1
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign:'center',
         alignItems: 'center',
-        // marginTop: 100,
+        marginTop: 100,
         // marginBottom:50
     },
     inputsView:{

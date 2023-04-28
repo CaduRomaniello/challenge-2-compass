@@ -10,9 +10,10 @@ type Props = {
     func2?:Function;
     func3?:Function;
     func4?:Function;
+    goToFunc?:Function
 };
 
-const Button = ({btnText, func1, func2, func3, func4}:Props) => {
+const Button = ({btnText, func1, func2, func3, func4, goToFunc}:Props) => {
     function onPress(){
         console.log("Pressed")
         if (func1){
@@ -26,6 +27,10 @@ const Button = ({btnText, func1, func2, func3, func4}:Props) => {
         }
         if (func4){
             func4();
+        }
+
+        if (goToFunc){
+            goToFunc()
         }
     }
 

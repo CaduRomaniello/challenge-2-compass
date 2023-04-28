@@ -1,6 +1,6 @@
 // Home Screen
 
-import { View, Text, FlatList} from 'react-native'
+import { View, Text, FlatList, SafeAreaView} from 'react-native'
 import CategoryGridTile from '../../components/CategoryGridTile';
 import styles from './style'
 
@@ -17,16 +17,18 @@ function onPress(){
 function HomeScreen(){
     return(
         <View style={styles.mainContainer}>
-            <View style={styles.textContainer}>
-                <Text style={styles.topText} onPress={onPress}>HOME</Text>
-            </View>
-            <FlatList
-                data = {data}
-                // keyExtractor={(item, index)=> {index}}
-                renderItem={({ item }) => <CategoryGridTile title={item.key} color={'white'} />}
-                numColumns={2}
-                style={styles.flatlist}
-            />
+            <SafeAreaView>
+                <View style={styles.textContainer}>
+                    <Text style={styles.topText} onPress={onPress}>HOME</Text>
+                </View>
+                <FlatList
+                    data = {data}
+                    // keyExtractor={(item, index)=> {index}}
+                    renderItem={({ item }) => <CategoryGridTile title={item.key} color={'white'} />}
+                    numColumns={2}
+                    style={styles.flatlist}
+                />
+            </SafeAreaView>
         </View>
     )
 }

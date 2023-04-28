@@ -3,9 +3,10 @@ import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     mainContainer:{
-        width:'95%',
+        width:'100%',
         flexDirection: 'column',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        backgroundColor: Colors.background
     },
     topText:{
         color:Colors.primary,
@@ -13,6 +14,8 @@ const styles = StyleSheet.create({
     },
     textContainer:{
         marginBottom:20,
+        marginTop:50,
+        marginLeft:20
     },
     flatlist:{
     }

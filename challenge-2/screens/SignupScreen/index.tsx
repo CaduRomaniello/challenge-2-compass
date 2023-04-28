@@ -1,14 +1,19 @@
 // Sign up screen
 
 import Checkbox from 'expo-checkbox';
-import { View, Text, StyleSheet, Pressable } from 'react-native'
+import { View, Text, StyleSheet, Pressable} from 'react-native'
 import Input from '../../components/Input';
 import {Colors} from '../../constants/styles'
 import Button from '../../components/Button';
 import React, { useState } from 'react';
 import styles from './style'
+import {NavigationProp, ParamListBase} from '@react-navigation/native';
 
-function SignupScreen(){
+type SignupScreenProps={
+    navigation: NavigationProp<ParamListBase>
+}
+
+function SignupScreen({navigation}:SignupScreenProps){
     const [isChecked, setChecked] = useState(false)
 
     const [enteredEmail, setEnteredEmail] = useState('')
@@ -67,7 +72,13 @@ function SignupScreen(){
     }
 
     function onPress(){
-        console.log("Text pressed")
+        navigation.navigate("LoginScreen")
+    }
+
+    function goToHomePage(){
+        if (enteredEmail!=='' && enteredPassword!=='' && enteredUsername!=='' && isChecked){
+            navigation.navigate("HomeScreen")
+        }
     }
 
     return <View style={styles.container}>
@@ -93,7 +104,7 @@ function SignupScreen(){
                     {checkboxIsEmpty?(
                         <Text style={styles.errorText}>Please accept the terms.</Text>
                     ):null}
-                <Button btnText='CREATE ACCOUNT' func1={emailIsEmptyHandler} func2={usernameIsEmptyHandler} func3={passwordIsEmptyHandler} func4={checkboxIsEmptyHandler}/>
+                <Button btnText='CREATE ACCOUNT' func1={emailIsEmptyHandler} func2={usernameIsEmptyHandler} func3={passwordIsEmptyHandler} func4={checkboxIsEmptyHandler} goToFunc={goToHomePage}/>
             </View>
         </View>
         <View style={styles.footer}>
