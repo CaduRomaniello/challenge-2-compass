@@ -51,6 +51,12 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'flex-start',
     },
+    checkboxContainerError:{
+        width: "100%",
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent: 'flex-start',
+    },
     checkbox:{
         marginRight: 10,
         borderRadius: 5,
@@ -69,6 +75,13 @@ const styles = StyleSheet.create({
     underlinedText:{
         textDecorationLine: 'underline',
         fontWeight: 'bold'
+    },
+    errorText:{
+        textAlign:'left',
+        alignSelf: "stretch",
+        color:Colors.warning,
+        fontSize: 12,
+        marginBottom:28
     }
 });
 

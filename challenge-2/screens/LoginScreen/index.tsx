@@ -48,7 +48,13 @@ function LoginScreen(){
             <View style={styles.inputsView}>
                 <Text style={styles.title}> WELCOME </Text>
                 <Input iconPath={require('../../assets/icon_mail.png')}  placeHolder='Your email' password={false} keyboardType='email-address' value={enteredEmail} onChangeText={emailInputHandler} isEmpty={emailIsEmpty}/>
+                {emailIsEmpty?(
+                    <Text style={styles.errorText}>Please enter a valid email address.</Text>
+                ):null}
                 <Input iconPath={require('../../assets/icon_lock.png')}  placeHolder='Your password' password={true} keyboardType='default' value={enteredPassword} onChangeText={passwordInputHandler} isEmpty={passwordIsEmpty}/>
+                {passwordIsEmpty?(
+                    <Text style={styles.errorText}>Please enter a valid password.</Text>
+                ):null}
                 <Button btnText='LOGIN' func1={emailIsEmptyHandler} func2={passwordIsEmptyHandler}/>
             </View>
         </View>

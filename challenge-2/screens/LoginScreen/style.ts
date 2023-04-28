@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         width: "100%",
         alignItems: 'center',
         justifyContent: 'center',
-        textAlign:'center'
+        textAlign:'center',
     },
     footer:{
         paddingTop:20,
@@ -43,6 +43,13 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         alignItems:'center',
         justifyContent: 'center',
+    },
+    errorText:{
+        textAlign:'left',
+        alignSelf: "stretch",
+        color:Colors.warning,
+        fontSize: 12,
+        marginBottom:28
     }
 });
 

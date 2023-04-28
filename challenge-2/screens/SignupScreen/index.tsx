@@ -75,12 +75,24 @@ function SignupScreen(){
             <Text style={styles.title}> SIGN UP </Text>
             <View style={styles.inputsView}>
                 <Input iconPath={require('../../assets/icon_mail.png')}  placeHolder='Your email' password={false} keyboardType='email-address' value={enteredEmail} onChangeText={emailInputHandler} isEmpty={emailIsEmpty}/>
+                {emailIsEmpty?(
+                    <Text style={styles.errorText}>Please enter a valid email address.</Text>
+                ):null}
                 <Input iconPath={require('../../assets/icon_user.png')}  placeHolder='username' password={false} keyboardType='default' value={enteredUsername} onChangeText={usernameInputHandler} isEmpty={usernameIsEmpty}/>
+                {usernameIsEmpty?(
+                    <Text style={styles.errorText}>Please enter a valid username.</Text>
+                ):null}
                 <Input iconPath={require('../../assets/icon_lock.png')}  placeHolder='Your password' password={true} keyboardType='default' value={enteredPassword} onChangeText={passwordInputHandler} isEmpty={passwordIsEmpty}/>
-                <View style={styles.checkboxContainer}>
+                {passwordIsEmpty?(
+                    <Text style={styles.errorText}>Please enter a valid password.</Text>
+                ):null}
+                <View style={checkboxIsEmpty? styles.checkboxContainerError : styles.checkboxContainer}>
                     <Checkbox style={checkboxIsEmpty ? styles.checkboxError : styles.checkbox} value={isChecked} onValueChange={setChecked} color={isChecked ? '#4630EB' : undefined}/>
                     <Text style={styles.checkboxText}>Agree To <Text style={styles.underlinedText}>Terms And Conditions</Text></Text>
                 </View>
+                    {checkboxIsEmpty?(
+                        <Text style={styles.errorText}>Please accept the terms.</Text>
+                    ):null}
                 <Button btnText='CREATE ACCOUNT' func1={emailIsEmptyHandler} func2={usernameIsEmptyHandler} func3={passwordIsEmptyHandler} func4={checkboxIsEmptyHandler}/>
             </View>
         </View>
