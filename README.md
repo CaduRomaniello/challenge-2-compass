@@ -17,4 +17,12 @@ The files are organized as follow:
   ┗ 📜all the app's screens
 ```
 
-The goal of this challenge were to made an app following the prototype provided by our instructors to practice React Native.
+The goal of this challenge were to made an app following the prototype provided by our instructors to practice React Native. We should code three screens: 
+
+<ol>
+  <li>Login screen</li>
+  <li>Sign up screen</li>
+  <li>Home screen</li>
+</ol>
+
+All of them should be connected with the React Native navigation. Other conditions were elaborated in the prototype.
