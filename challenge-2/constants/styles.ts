@@ -4,4 +4,4 @@ export const Colors = {
     warning: '#FF4B4B',
     input: '#656262',
     inputPlaceholder: '#A8A8A8',
-  }
+}

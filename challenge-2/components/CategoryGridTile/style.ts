@@ -1,14 +1,4 @@
-import { View, Text, StyleSheet } from "react-native"
-
-function CategoryGridTile({title, color}){
-    return(
-        <View style={styles.gridItem}>
-            {/* <Text style={styles.textItem}>{title}</Text> */}
-        </View>
-    )
-}
-
-export default CategoryGridTile
+import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
     gridItem:{
@@ -24,3 +14,5 @@ const styles = StyleSheet.create({
         textAlign:"center"
     }
 });
+
+export default styles;
